@@ -1,6 +1,6 @@
-var express = require('express'),
-    morgan = require('morgan'),
-    bodyParser = require('body-parser');
+var express = require('express');
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
 
 var app = express();
 
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.get('*', function(req, res) {
- res.render('index'); 
+  res.render('index'); 
 });
 
 var port = 1337;
