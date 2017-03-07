@@ -1,5 +1,12 @@
 doctype html
-html
+html(ng-app="")
   head
-  body
-    
+    title Mealify
+  body(data-ng-init="meals=[{name:'pulled pork burrito', rating: '10/10' },{name:'chicken burrito', rating: '5/5' },{name:'The best coffee', rating: '3 stars' }]")
+    .section
+    h1 Mealify is Awesome!
+    input(type='text', data-ng-model='name', placeholder='Search...') 
+    br
+    ul
+      li(data-ng-repeat='meal in meals | filter:name') {{ meal.name }} has a rating of {{ meal.rating }}
+    script(src='../lib/angular/angular.js')
