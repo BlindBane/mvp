@@ -1,8 +1,5 @@
-//- index.pug
-doctype html
-html
-  include ../includes/head.pug
-  body
-    h1 My Site
-    p Welcome to my super lame site.
-    include ../includes/foot.pug
+extends ../includes/layout
+
+block main-content
+  section.content
+    h1 Hello ng!
