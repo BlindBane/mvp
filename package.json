@@ -18,6 +18,8 @@
   "homepage": "https://github.com/BlindBane/mvp#readme",
   "dependencies": {
     "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.2.0",
     "mongoose": "^4.8.6",
     "pug": "^2.0.0-beta11"
   }
