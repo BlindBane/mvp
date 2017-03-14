@@ -2,7 +2,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var mockData = require('../mock/reviews.json')
+
 var router = require('./api');
 var app = express();
 var PORT = process.env.PORT || 3000;

@@ -8,7 +8,7 @@
 </head>
 <body ng-controller="ReviewsCtrl">
   <h1>Welcome to Mealify!</h1>
-  <div class="addmeal">
+  <div class="addmeal" ng-controller="AddMealCtrl">
     <h3>Add a new meal</h3>
     <p>Meal name:  <input ng-model="meal.name" type="text"> {{meal.name}}</p>
     <p>Rating: <input ng-model="meal.rating" type="text"> {{meal.rating}}</p>
@@ -30,8 +30,8 @@
   </div>
 
   <script src="./../node_modules/angular/angular.js"></script>
-  <script src="./mealify.js"></script>
-  <script src="./appng/addmeal.js"></script>
-  <script src="./appng/meals.js"></script>
+  <script src="./app/mealify.js"></script>
+  <script src="./app/controllers/addmeal.js"></script>
+  <script src="./app/controllers/meals.js"></script>
 </body>
 </html>
