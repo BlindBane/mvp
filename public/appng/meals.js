@@ -16,11 +16,12 @@ angular.module('Mealify').controller('ReviewsCtrl', function ReviewsCtrl($scope)
       details: 'amazing!!!!'
     },
   ];
+  $scope.meal = {};
 
   $scope.addReview = function() {
-    var meal = { name: "Bob's Burger's",
-                 rating: "5 out of 5",
-                 details: "Sooo goood!"
+    var meal = { name: $scope.meal.name,
+                 rating: $scope.meal.rating,
+                 details: $scope.meal.details
     };
     $scope.reviews.push(meal);
   };
