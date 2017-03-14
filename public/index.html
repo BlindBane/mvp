@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Mealify">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mealify</title>
 </head>
-<body ng-app="Mealify">
+<body ng-controller="AddMealCtrl">
   <h1>Welcome to Mealify!</h1>
-  <nav>
+  <nav
     <ul>
       <li>Reviews</li>
       <li>Add a Review</li>
     </ul>
   </nav>
-  <div>
+  <div class="addmeal">
     <h3>Add a new meal</h3>
     <p>Meal name:</p>
-    <input type="text">
+    <input ng-model="meal.name" type="text"> {{meal.name}}
     <p>Rating:</p>
-    <input type="text">
+    <input ng-model="meal.rating" type="text"> {{meal.rating}}
     <p>Details:</p>
-    <input type="text">
+    <input ng-model="meal.details" type="text"> {{meal.details}}
     <br>
     <button>Submit Review!</button>
   </div>
-  <div class="reveiws">
-    <h3>Reviews!</h3>
-    <div class="review">
-      <p>Meal name:</p>
-      <p>Name example</p>
-      <p>Rating:</p>
-      <p>Rating example</p>
-      <p>Details:</p>
-      <p>Deatils example</p>
+
+
+  <h3>Reviews!</h3>
+  <div ng-controller="ReviewsCtrl">
+    <div class="reveiws" ng-repeat="review in reviews">
+      <div class="review">
+        <p>Meal name:</p>
+        <p>{{review.name}}</p>
+        <p>Rating:</p>
+        <p>{{review.rating}}</p>
+        <p>Details:</p>
+        <p>{{review.details}}</p>
+      </div>
     </div>
   </div>
+
   <script src="./../node_modules/angular/angular.js"></script>
   <script src="./mealify.js"></script>
+  <script src="./appng/addmeal.js"></script>
+  <script src="./appng/meals.js"></script>
 </body>
 </html>
