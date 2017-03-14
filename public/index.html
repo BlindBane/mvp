@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mealify</title>
 </head>
-<body ng-controller="AddMealCtrl">
+<body ng-controller="ReviewsCtrl">
   <h1>Welcome to Mealify!</h1>
-  <nav
+  <nav>
     <ul>
       <li>Reviews</li>
       <li>Add a Review</li>
@@ -23,15 +23,15 @@
     <p>Details:</p>
     <input ng-model="meal.details" type="text"> {{meal.details}}
     <br>
-    <button>Submit Review!</button>
+    <button ng-click="addReview()">Submit Review!</button>
   </div>
 
 
   <h3>Reviews!</h3>
-  <div ng-controller="ReviewsCtrl">
+  <div>
     <div class="reveiws" ng-repeat="review in reviews">
       <div class="review">
-        <p>Meal name:</p>
+        <p><strong>Meal name:</strong></p>
         <p>{{review.name}}</p>
         <p>Rating:</p>
         <p>{{review.rating}}</p>

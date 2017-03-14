@@ -16,4 +16,12 @@ angular.module('Mealify').controller('ReviewsCtrl', function ReviewsCtrl($scope)
       details: 'amazing!!!!'
     },
   ];
-});;
+
+  $scope.addReview = function() {
+    var meal = { name: "Bob's Burger's",
+                 rating: "5 out of 5",
+                 details: "Sooo goood!"
+    };
+    $scope.reviews.push(meal);
+  };
+});
