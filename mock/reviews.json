@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Paddys's potato's",
+    "rating": "4",
+    "details": "The best potato in SOMA!"
+  },
+  {
+    "name": "Chipoltle",
+    "rating": "5",
+    "details": "It's never a bad decision!"
+  },
+  {
+    "name": "Magic Burger",
+    "rating": "2",
+    "details": "The not so magical burger in SOMA!"
+  }
+]

@@ -2,9 +2,10 @@
 
 var express = require('express');
 var router = express.Router();
+var mockData = require('../../mock/reviews.json');
 
 router.get('/reviews', function(req, res) {
-  res.send('you send a GET request to the mealily Meals api!');
+  res.send(mockData);
 });
 
 router.post('/reviews', function(req, res) {
