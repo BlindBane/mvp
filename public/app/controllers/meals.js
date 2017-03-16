@@ -9,4 +9,13 @@ angular.module('Mealify')
       $scope.reviews = res;
     });
 
+    $scope.addReview = function() {
+      var meal = { name: $scope.meal.name,
+                   rating: $scope.meal.rating,
+                   details: $scope.meal.details
+      };
+      dataService.postMealReviews($scope.meal);
+
+    };
+
 });
