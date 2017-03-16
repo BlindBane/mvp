@@ -2,7 +2,6 @@
 
 var express = require('express');
 var router = express.Router();
-// var mockData = require('../../mock/reviews.json');
 var Review = require('./../db/schemas/reviewSchema.js');
 
   router.get('/reviews', function(req, res) {

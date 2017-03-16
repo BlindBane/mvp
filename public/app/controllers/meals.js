@@ -2,9 +2,11 @@
 
 angular.module('Mealify')
 .controller('ReviewsCtrl', function ReviewsCtrl($scope, dataService) {
-  dataService.getMealReviews(function(res) {
-    var reviews = res.data;
-    $scope.reviews = reviews;
-  });
+    $scope.reviews = [];
+
+    dataService.getMealReviews()
+    .then(function(res) {
+      $scope.reviews = res;
+    });
 
 });
