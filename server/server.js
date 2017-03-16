@@ -2,9 +2,11 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var db = require('./db/index.js');
 
 var router = require('./api');
 var app = express();
+require('./seed.js');
 var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
